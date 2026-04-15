@@ -7,374 +7,8 @@
     <!-- Google Fonts & Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: #F9FAFE;
-            font-family: 'Inter', 'Segoe UI', sans-serif;
-            color: #1E2F3A;
-            line-height: 1.5;
-            scroll-behavior: smooth;
-        }
-
-        .container {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 0 32px;
-        }
-
-        /* Header / Hero */
-        .hero {
-            padding: 80px 0 60px;
-            background: linear-gradient(135deg, #0B2B40 0%, #144B66 100%);
-            color: white;
-            border-radius: 0 0 32px 32px;
-            margin-bottom: 48px;
-        }
-
-        .hero-content {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 40px;
-        }
-
-        .hero-text {
-            flex: 2;
-        }
-
-        .hero-text h1 {
-            font-size: 3.2rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            margin-bottom: 16px;
-        }
-
-        .hero-text h1 span {
-            color: #A8D0E6;
-            font-weight: 600;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.12);
-            backdrop-filter: blur(4px);
-            padding: 6px 16px;
-            border-radius: 40px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
-
-        .hero-desc {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 20px 0;
-            border-left: 3px solid #5D9BB6;
-            padding-left: 20px;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-            margin-top: 24px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 28px;
-            border-radius: 40px;
-            font-weight: 600;
-            transition: all 0.2s ease;
-            text-decoration: none;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #0B2B40;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        .btn-outline {
-            border: 1.5px solid white;
-            color: white;
-        }
-
-        .btn-outline:hover {
-            background: white;
-            color: #0B2B40;
-        }
-
-        .hero-photo {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-
-        .photo-circle {
-            width: 220px;
-            height: 220px;
-            background: linear-gradient(145deg, #2E6A84, #1A4D64);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.3);
-            border: 3px solid rgba(255,255,255,0.2);
-        }
-
-        .photo-circle i {
-            font-size: 90px;
-            color: #A8D0E6;
-        }
-
-        /* Secciones generales */
-        section {
-            margin-bottom: 70px;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #0B2B40;
-            margin-bottom: 40px;
-            letter-spacing: -0.3px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: #5D9BB6;
-            border-radius: 3px;
-        }
-
-        /* Skills chips */
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-top: 20px;
-        }
-
-        .skill-chip {
-            background: #EFF3F8;
-            padding: 10px 24px;
-            border-radius: 40px;
-            font-weight: 500;
-            color: #1E5A6E;
-            transition: all 0.2s;
-            font-size: 0.9rem;
-        }
-
-        .skill-chip i {
-            margin-right: 8px;
-            color: #2C7DA0;
-        }
-
-        /* Proyectos */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 24px;
-            padding: 24px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
-            border: 1px solid #E9EDF2;
-            transition: all 0.25s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
-            border-color: #C9E1EC;
-        }
-
-        .project-icon {
-            font-size: 2.2rem;
-            color: #2C7DA0;
-            margin-bottom: 16px;
-        }
-
-        .project-card h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .project-desc {
-            color: #4A5B68;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-
-        .tech-tag {
-            background: #EFF3F8;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: #2C7DA0;
-        }
-
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #0B2B40;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 0.85rem;
-            border-bottom: 1.5px solid #A8D0E6;
-            transition: gap 0.2s;
-        }
-
-        .project-link:hover {
-            gap: 12px;
-        }
-
-        /* Experiencia / Educación estilo timeline simple */
-        .timeline-item {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-bottom: 32px;
-        }
-
-        .timeline-year {
-            min-width: 100px;
-            font-weight: 700;
-            color: #2C7DA0;
-        }
-
-        .timeline-content h4 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        .timeline-content p {
-            color: #4A5B68;
-        }
-
-        /* Contacto y Footer */
-        .contact-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: space-between;
-            align-items: center;
-            background: #F0F4F9;
-            padding: 40px;
-            border-radius: 32px;
-        }
-
-        .contact-info {
-            display: flex;
-            gap: 28px;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 1rem;
-        }
-
-        .contact-item i {
-            font-size: 1.4rem;
-            color: #2C7DA0;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .social-links a {
-            color: #1E5A6E;
-            font-size: 1.8rem;
-            transition: transform 0.2s;
-        }
-
-        .social-links a:hover {
-            transform: translateY(-3px);
-            color: #0B2B40;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 0 30px;
-            border-top: 1px solid #E2E8F0;
-            margin-top: 20px;
-            color: #6C7A89;
-            font-size: 0.85rem;
-        }
-
-        @media (max-width: 780px) {
-            .hero {
-                padding: 50px 0 40px;
-            }
-            .hero-content {
-                flex-direction: column-reverse;
-                text-align: center;
-            }
-            .hero-text h1 {
-                font-size: 2.2rem;
-            }
-            .hero-desc {
-                text-align: left;
-            }
-            .btn-group {
-                justify-content: center;
-            }
-            .container {
-                padding: 0 20px;
-            }
-            .section-title {
-                font-size: 1.5rem;
-            }
-            .contact-grid {
-                flex-direction: column;
-                text-align: center;
-            }
-            .contact-info {
-                justify-content: center;
-            }
-        }
-    </style>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -405,7 +39,7 @@
 </div>
 
 <div class="container">
-    <!-- Sección Sobre mí + skills -->
+    <!-- Sobre mí -->
     <section>
         <h2 class="section-title">Sobre mí</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 40px;">
@@ -427,7 +61,7 @@
         </div>
     </section>
 
-    <!-- Proyectos destacados -->
+    <!-- Proyectos -->
     <section id="proyectos">
         <h2 class="section-title">Proyectos destacados</h2>
         <div class="projects-grid">
@@ -471,7 +105,7 @@
                 <div class="project-tech"><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">GitHub Pages</span></div>
                 <a href="https://devemech.github.io/curriculum-vitae/" target="_blank" class="project-link">Ver proyecto <i class="fas fa-arrow-right"></i></a>
             </div>
-            <!-- GitHub (repositorios) -->
+            <!-- GitHub -->
             <div class="project-card">
                 <div class="project-icon"><i class="fab fa-github"></i></div>
                 <h3>Más en GitHub</h3>
@@ -482,7 +116,7 @@
         </div>
     </section>
 
-    <!-- Experiencia laboral y educación -->
+    <!-- Experiencia y formación -->
     <section>
         <h2 class="section-title">Experiencia & Formación</h2>
         <div>
@@ -505,7 +139,7 @@
         </div>
     </section>
 
-    <!-- Certificaciones destacadas -->
+    <!-- Certificaciones -->
     <section>
         <h2 class="section-title">Certificaciones</h2>
         <div class="skills-grid">
@@ -535,5 +169,11 @@
         <p>© 2025 Ruber Urbina · Desarrollador Frontend e Ingeniero Mecánico</p>
     </footer>
 </div>
+
+<!-- Script opcional para foto (puedes eliminarlo si no lo usas) -->
+<script>
+    // Si quieres usar foto, reemplaza el ícono por una etiqueta img dentro de .photo-circle
+    // Ejemplo: document.querySelector('.photo-circle').innerHTML = '<img src="tu-foto.jpg" alt="Ruber">';
+</script>
 </body>
 </html>
