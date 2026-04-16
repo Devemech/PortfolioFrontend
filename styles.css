@@ -127,18 +127,16 @@ body {
     border: 3px solid rgba(255,255,255,0.2);
 }
 
-.photo-circle i {
+.photo-circle img {
     font-size: 90px;
     color: #A8D0E6;
-    
-}
-.photo-circle img {
     width: 100%; 
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
     
 }
+
 /* Secciones */
 section {
     margin-bottom: 70px;
