@@ -116,8 +116,8 @@ body {
 }
 
 .photo-circle {
-    width: 100px;
-    height: 100px;
+    width: 220px;
+    height: 220px;
     background: linear-gradient(145deg, #2E6A84, #1A4D64);
     border-radius: 50%;
     display: flex;
